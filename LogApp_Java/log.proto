@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package company;
+
+option java_package = "com.company";
+option java_outer_classname = "LogEvents";
+
+  message Events {
+    required int32 count = 1;
+    message Event {
+		required int64 timestamp = 1;
+		required int64 userId = 2;
+		required string event = 3;
+		}
+		
+	repeated Event events = 4;
+  }
